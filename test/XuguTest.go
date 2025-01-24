@@ -12,7 +12,7 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf(">>>>>>>>>>>>>>>>>>>>>>>>%+v\n", dbObj)
-	rows, err := dbObj.Query("select * from sys_user", []any{})
+	rows, err := dbObj.Query("select * from sys_user", []any{}...)
 	if err != nil {
 		panic(err)
 	}
